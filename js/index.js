@@ -67,7 +67,7 @@
 
 
 //var a= true;
-//var b= false;      /// And operator means if both conditions are true then it provide 1 or 0////////
+//var b= false;      /// And operator means if both conditions are true then it provide 1 otherwise 0////////
 //console.log(a & b);
 
 //var a= true;
@@ -81,23 +81,23 @@
 
 //////////////// If else condition /////////////////////
 
-//var a=10;
-//if(a>10){
-  //  console.log('value of a is greater than 10')
-//}
-//else if(a==10){
-    //console.log('value of a is equal to  10')
-//}
-//else if(a==9){
-    //console.log('value of a is equal to  9')     //////// we can use multiple else if condition in if else condition///////
-//}
-//else if(a==8){
-    //console.log('value of a is equal to  8')
-//}
-//else
-//{
-    //console.log('value of a is less than 10')
-//}
+// var a=10;
+// if(a>10){
+//    console.log('value of a is greater than 10')
+// }
+// else if(a==10){
+//     console.log('value of a is equal to  10')  ////// both values are equal then we use == ////////
+// }
+// else if(a==9){
+//     console.log('value of a is equal to  9')     //////// we can use multiple else if condition in if else condition///////
+// }
+// else if(a==8){
+//     console.log('value of a is equal to  8')
+// }
+// else
+// {
+//     console.log('value of a is less than 10')
+// }
 
 
 ///////////////////////////Arrays///////////////////////////
@@ -121,6 +121,50 @@
  //a.unshift('Australia')     /// we can use the unshift function to Add the value in first index (like first number or value) of array/////
 //console.log(a);
 
-var a=[1,2,'hamid','ahsan'];
- var b= a.toString()   /// we can use the tostring function to convert the value in to string and we always use string in single ''/////
-console.log(b);
+// var a=[1,2,'hamid','ahsan'];
+//  var b= a.toString()   /// we can use the tostring function to convert the value in to string and we always use string in single ''/////
+// console.log(b);
+
+///////////////////////////////// javascript functions /////////////////////////////////////////////////////
+
+//var str='hamid is a man hamid is a programmer';
+// console.log(str.length); ///////// check the total length///////////////
+// console.log(str.indexOf("man")); /// check the length from start to this word man////////
+// console.log(str.indexOf('hamid')); /////// this function just pick the first hamid in the text.////////
+// console.log(str.lastIndexOf('hamid'));/////// this function just pick the last hamid in the text.////////
+// console.log(str.slice(0,4));/////////// this slice function just break the words according to requirement/////
+// console.log(str.replace("hamid","ahsan"));/////// this function just replace word //////////
+
+
+////////////////////////////// date functions in javascript/////////////////////////////////
+// let mydate= new Date();
+// console.log(mydate);////////// to get the current date//////////
+// console.log(mydate.getDay());/////////////// to get the today number////////// like monday is 1 tuesday is 2 so on///
+// console.log(mydate.getFullYear());///////// to get the current year/////////////
+// console.log(mydate.getHours());////////// to get the hours //////////////
+// console.log(mydate.getMinutes());/////////// to get the minutes /////////
+
+
+////////////// looopsssss///////////////////////
+
+
+/////////////////////For Loop/////////////////////////////////////////
+
+for(var i=1; i<11;i++){
+    console.log(2*i);   /////////// For loop for concept of table 2/////////
+}
+
+var arr=[1,2,3,"hamid",true];
+for(var i=0; i<arr.length;i++){   /////// for looop to get the length of array ////////////////////
+console.log(arr[i]);
+}
+
+var arr=[1,2,3,"hamid",true];
+for(var i=0; i<arr.length;i++){  /////////// for loop with using array ///////////////
+    if(arr[i]==2){
+
+    }  
+    else{
+        console.log(arr[i]);
+    }
+}
