@@ -150,21 +150,44 @@
 
 /////////////////////For Loop/////////////////////////////////////////
 
-for(var i=1; i<11;i++){
-    console.log(2*i);   /////////// For loop for concept of table 2/////////
-}
+// for(var i=1; i<11;i++){
+//     console.log(2*i);   /////////// For loop for concept of table 2/////////
+// }
 
-var arr=[1,2,3,"hamid",true];
-for(var i=0; i<arr.length;i++){   /////// for looop to get the length of array ////////////////////
-console.log(arr[i]);
-}
+// var arr=[1,2,3,"hamid",true];
+// for(var i=0; i<arr.length;i++){   /////// for looop to get the length of array ////////////////////
+// console.log(arr[i]);
+// }
 
-var arr=[1,2,3,"hamid",true];
-for(var i=0; i<arr.length;i++){  /////////// for loop with using array ///////////////
-    if(arr[i]==2){
+// var arr=[1,2,3,"hamid",true];
+// for(var i=0; i<arr.length;i++){  /////////// for loop with using array ///////////////
+//     if(arr[i]==2){
 
-    }  
-    else{
-        console.log(arr[i]);
-    }
+//     }  
+//     else{
+//         console.log(arr[i]);
+//     }
+// }
+
+
+//////////////////////////// while loop ///////////////////////////
+// var arr=[1,2,3,"hamid",true];
+// let i=0;
+// while(i<arr.length){
+//     console.log(arr[i]);
+// }
+
+var arr=[1,2,5,"Hamid",true];
+// for(var i=0;i<=5;i++){
+//     console.log(arr[i]);   /////////////// foor loop////////////////////
+// }
+
+// arr.forEach(function(element){
+//     console.log(element); ////////////////For Each ///////////////////////
+// })
+
+let i=0;
+while(i<arr.length){
+    console.log(arr[i]);
+    i++;
 }
