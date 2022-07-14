@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+      .formerror{
+        color:red;
+      }
+    </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,82 +19,100 @@
     <div id="c1" class="container">
         <h1> Welcome to Javascript Form</h1>
 
-        <form class="mt-5">
-          <div class="row mb-3">
-            <label for="fname" class="col-sm-2 col-form-label">Full Name</label>
+        <form class="mt-5" action="#" name="myForm" onsubmit="return validateForm()" method="post">
+          <div class="row mb-3" id="fullname">
+            <label for="" class="col-sm-2 col-form-label">Full Name</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="fname">
+              <input type="text" class="form-control" name="fname">
+              <b><span class="formerror"></span></b>
             </div>
-          </div>
-          <div class="row mb-3">
+         </div>
+          <div class="row mb-3" id="email">
             <label for="email" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="email">
+              <input type="email" class="form-control" name="femail">
+              <b><span class="formerror"></span></b>
             </div>
           </div>
-          <div class="row mb-3">
+          <div class="row mb-3" id="password">
             <label for="password" class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" id="password">
+              <input type="password" class="form-control" name="fpassword">
+              <b><span class="formerror"></span></b>
             </div>
           </div>
-          <div class="row mb-3">
+          <div class="row mb-3" id="confirmpassword">
+            <label for="confirmpassword" class="col-sm-2 col-form-label">Confirm Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="fconfirmpassword">
+              <b><span class="formerror"></span></b>
+            </div>
+          </div>
+          <div class="row mb-3" id="profession">
             <label for="select" class="col-sm-2 col-form-label">Profession</label>
             <div class="col-sm-10">
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
+              <select class="form-select" name="fprofession">
+                <option value="0">Open this select menu</option>
                 <option value="1">IT</option>
                 <option value="2">BUSSINES</option>
                 <option value="3">DOCTORS</option>
               </select>
+              <b><span class="formerror"></span></b>
             </div>
           </div>
-          <fieldset class="row mb-3">
+          <fieldset class="row mb-3" id="gender">
             <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-            <div class="col-sm-10">
+            <div class="col-sm-10" >
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <input class="form-check-input" type="radio" name="fgender" id="gridRadios1" value="male">
                 <label class="form-check-label" for="gridRadios1">
                   Male
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <input class="form-check-input" type="radio" name="fgender" id="gridRadios2" value="female">
                 <label class="form-check-label" for="gridRadios2">
                   Female
                 </label>
               </div>
+              <b><span class="formerror"></span></b>
              
             </div>
           </fieldset>
-          <div class="row mb-3">
+          <div class="row mb-3" id="language">
             <legend class="col-form-label col-sm-2 pt-0">Languages</legend>
-            <div class="col-sm-10 ">
+            <div class="col-sm-10" >
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <input class="form-check-input" name="flanguage[]" type="checkbox" >
                 <label class="form-check-label" for="gridCheck1">
                   English
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <input class="form-check-input" name="flanguage[]" type="checkbox" >
                 <label class="form-check-label" for="gridCheck1">
                   Urdu
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                <input class="form-check-input" name="flanguage[]" type="checkbox" >
                 <label class="form-check-label" for="gridCheck1">
                   Spanish
                 </label>
               </div>
+              <b><span class="formerror"></span></b>
             </div>
-            <div class="row mb-3">
-              <label for="textarea" class="col-sm-2 col-form-label">Reason</label>
-              <div class="col-sm-10">
-                <textarea class="form-control" id="textarea" rows="3"></textarea>
-              </div>
+            
+           
+            
+          </div>
+          <div class="row mb-3" id="reason">
+            <label for="textarea" class="col-sm-2 col-form-label">Reason</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="ftextarea" rows="3"></textarea>
+              <b><span class="formerror"></span></b>
             </div>
+            
           </div>
           <button type="submit" class="btn btn-primary">Sign in</button>
         </form>
