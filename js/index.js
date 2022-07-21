@@ -177,7 +177,7 @@
 //     console.log(arr[i]);
 // }
 
-var arr=[1,2,5,"Hamid",true];
+//var arr=[1,2,5,"Hamid",true];
 // for(var i=0;i<=5;i++){
 //     console.log(arr[i]);   /////////////// foor loop////////////////////
 // }
@@ -186,8 +186,87 @@ var arr=[1,2,5,"Hamid",true];
 //     console.log(element); ////////////////For Each ///////////////////////
 // })
 
-let i=0;
-while(i<arr.length){
-    console.log(arr[i]);
-    i++;
+// let i=0;
+// while(i<arr.length){
+//     console.log(arr[i]);
+//     i++;
+// }
+
+
+function setError(id,error){
+    element=document.getElementById(id);
+    element.getElementsByClassName('formerror')[0].innerHTML=error;
+}
+
+function clearErrors(){
+    errors=document.getElementsByClassName('formerror');
+    for(let item of errors){
+        item.innerHTML="";
+    }
+}
+function validateForm(){
+    var returnval=true;
+    clearErrors();
+    //////// FullName validation///////////
+    var fullname=document.forms["myForm"]["fname"].value;
+if (fullname.length==0){
+    setError("fullname","please Provide Name");
+    returnval=false;
+}
+else if (fullname.length>10){
+    setError("fullname","Name Must be of 10 Character");
+    returnval=false;
+}
+///////////////// Email Validation///////////
+
+var email=document.forms["myForm"]["femail"].value;
+if (email.length==0){
+    setError("email","please Provide email");
+    returnval=false;
+}
+else if (email.length>20){
+    setError("email","Email Must be of 20 Character");
+    returnval=false;
+}
+
+///////////////// Password Validation///////////
+
+var password=document.forms["myForm"]["fpassword"].value;
+if (password.length==0){
+    setError("password","please Provide password");
+    returnval=false;
+}
+else if (password.length!=8){
+    setError("password","password Must be of 8 Character");
+    returnval=false;
+}
+
+///////////////// Confirm Password Validation///////////
+
+var cpassword=document.forms["myForm"]["fconfirmpassword"].value;
+if (cpassword.length==0){
+    setError("confirmpassword","please Provide confirmpassword");
+    returnval=false;
+}
+else if (cpassword!=password){
+    setError("confirmpassword","password mismatch");
+    returnval=false;
+}
+/////////////////Profession Validation///////////
+var profession=document.forms["myForm"]["fprofession"].value;
+if (profession==0){
+    setError("profession","please choose profession");
+    returnval=false;
+}
+
+/////////////////gender Validation///////////
+var gender=document.forms["myForm"]["fgender"].value;
+if (gender==''){
+    setError("gender","Select Gender");
+    returnval=false;
+}
+
+
+    //console.log(name);
+    return returnval;
 }
